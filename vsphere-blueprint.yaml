@@ -61,7 +61,7 @@ node_templates:
     type: nodecellar.nodes.MonitoredMongoDatabase
     relationships:
       - type: cloudify.relationships.contained_in
-        target: mongod-host
+        target: mongod_host
 
   nodejs:
     type: nodecellar.nodes.NodeJSServer
