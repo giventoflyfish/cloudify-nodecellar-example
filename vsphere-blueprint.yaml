@@ -69,10 +69,10 @@ node_templates:
       - type: cloudify.relationships.contained_in
         target: nodejs-host
 
-  mongod_host:
+  mongod-host:
     type: nodecellar.nodes.MonitoredServer
 
-  nodejs_host:
+  nodejs-host:
     type: nodecellar.nodes.MonitoredServer
 
 outputs:
@@ -80,5 +80,5 @@ outputs:
   endpoint:
     description: Web application endpoint
     value:
-      ip_address: { get_attribute: [ nodejs_host, public_ip ] }
+      ip_address: { get_attribute: [ nodejs-host, public_ip ] }
       port: { get_property: [ nodecellar, port ] }
